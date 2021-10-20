@@ -23,7 +23,7 @@
     "API-REST"
   ],
   "author": {
-    "name":"Felipe Parra",
+    "name": "Felipe Parra",
     "email": "felipeparraramirez@hotmail.com",
     "url": "https://github.com/felipe-parra"
   },
@@ -66,5 +66,24 @@
     "webpack": "^5.59.0",
     "webpack-dev-middleware": "^5.2.1",
     "webpack-livereload-plugin": "^3.0.2"
+  },
+  "nodemonConfig": {
+    "exec": "npm run dev:win",
+    "watch": [
+      "src/*"
+    ],
+    "ignore": [
+      "**/__tests__/**",
+      "*.test.js",
+      "*.spec.js"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
